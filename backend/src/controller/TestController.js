@@ -3,7 +3,7 @@ const Test = require("../model/Test")
 const TestController = {
     createTest: async function (req, res, next){
         try{
-            const test = {title: "123"}
+            const test = {title: "1243"}
             const testCreate = await Test.create({
                 test
             })

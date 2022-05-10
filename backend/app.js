@@ -13,4 +13,7 @@ app.use(express.json());
 const TestRouter = require("./src/routes/TestRoutes")
 app.use(TestRouter)
 
+const BookingRouter = require("./src/routes/BookingRoutes")
+app.use(BookingRouter)
+
 module.exports = app;

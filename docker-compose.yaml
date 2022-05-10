@@ -3,21 +3,13 @@ services:
     build:
       context: ./frontend/
       dockerfile: Dockerfile
+    image: 62070096/frontend
     ports:
       - 3000:3000
   express-app:
     build:
       context: ./backend/
       dockerfile: Dockerfile
+    image: 62070096/backend
     ports:
       - 3030:3030
-  jenkins-app:
-    image: jenkins/jenkins:lts-jdk11
-    volumes:
-     - jenkins_home:/var/jenkins_home
-    ports:
-      - 8080:8080
-
-volumes:
-  jenkins_home:
-    external: true

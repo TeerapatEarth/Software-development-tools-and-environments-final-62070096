@@ -3,9 +3,9 @@ const Test = require("../model/Test")
 const TestController = {
     createTest: async function (req, res, next){
         try{
-            const test = {title: "1243"}
+            const { title } = req.body
             const testCreate = await Test.create({
-                test
+                title
             })
             res.status(200).json(testCreate)
         } catch (err){
